@@ -1,97 +1,200 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#180c2d">
-<title>Diwali Night ✨</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#100b27">
+<title>A Little Diwali World ✨</title>
 <style>
-*{box-sizing:border-box} 
-:root{--gold:#ffd66b;--night:#170c2a}
-body{margin:0;background:radial-gradient(ellipse at 50% 25%,#42205d 0,#170c2a 65%,#090713 100%);color:#fff;font-family:system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh;overflow-x:hidden}
-header{text-align:center;padding:22px 14px 10px;position:relative;z-index:2}
-h1{font-family:Georgia,serif;color:#ffe7a0;font-size:clamp(28px,7vw,46px);margin:4px 0;text-shadow:0 0 18px #ffae42}
-.sub{color:#f8dcb7;font-size:14px;margin:0}
-.scene-wrap{max-width:950px;margin:0 auto;padding:8px 12px 0}
-.scene{height:min(67vh,610px);min-height:430px;position:relative;overflow:hidden;border:2px solid #d99b55;border-radius:22px;background:linear-gradient(#25113e 0 37%,#71335c 37% 54%,#b85c4e 54% 100%);box-shadow:0 18px 50px #0009;isolation:isolate}
-.moon{position:absolute;top:7%;right:12%;width:62px;height:62px;border-radius:50%;background:#fff0b4;box-shadow:0 0 35px #ffdf8d}
-.star{position:absolute;color:#ffe7a0;text-shadow:0 0 10px #ffdf8d;animation:twinkle 2s infinite alternate}
-@keyframes twinkle{to{opacity:.35;transform:scale(.75)}}
-.string{position:absolute;top:12%;left:-5%;width:110%;height:90px;border-top:2px solid #ffd58b;border-radius:50%;transform:rotate(5deg)}
-.lantern{position:absolute;top:13%;width:24px;height:35px;background:linear-gradient(90deg,#ff9c32,#ffe18b,#f26a29);clip-path:polygon(50% 0,100% 28%,85% 100%,15% 100%,0 28%);filter:drop-shadow(0 0 12px #ffb342);animation:sway 3s ease-in-out infinite alternate}
-@keyframes sway{to{transform:rotate(8deg)}}
-.building{position:absolute;bottom:29%;width:31%;height:46%;border:4px solid #e7a66c;box-shadow:inset 0 0 0 5px #ffffff20,0 8px 15px #30112b;z-index:1}
-.building:before{content:"";position:absolute;left:-5px;right:-5px;top:-17px;height:17px;background:#ffd08b;border:3px solid #a64b4b}
-.left{left:-2%;background:linear-gradient(90deg,#e85c91,#b83c82)}.middle{left:34%;width:31%;height:52%;background:linear-gradient(90deg,#8b55cb,#6d3caa)}.right{right:-2%;background:linear-gradient(90deg,#ec8a4f,#c85c43)}
-.win{position:absolute;width:24%;height:23%;background:#ffe59b;border:5px solid #7b3c50;box-shadow:0 0 15px #ffe27a,inset 0 0 12px #fff;top:20%}
-.win:nth-child(1){left:13%}.win:nth-child(2){right:13%;top:52%}
-.door{position:absolute;bottom:0;left:35%;width:30%;height:37%;border:5px solid #71364c;border-radius:45% 45% 0 0;background:repeating-linear-gradient(90deg,#54253b 0 8px,#74354a 8px 12px)}
-.sign{position:absolute;bottom:34%;left:39%;font-size:10px;background:#542c2b;color:#ffe6a3;padding:3px 8px;border:1px solid #ffdb87;z-index:2}
-.temple{position:absolute;left:42%;bottom:29%;width:16%;height:40%;background:#f5d6c0;border:4px solid #d98c65;z-index:2}
-.temple:before{content:"";position:absolute;left:5%;right:5%;top:-42%;height:45%;background:#f47c38;clip-path:polygon(50% 0,100% 100%,0 100%)}
-.temple:after{content:"";position:absolute;left:35%;bottom:0;width:30%;height:48%;background:#8a3944;border-radius:50% 50% 0 0}
-.floor{position:absolute;z-index:3;bottom:0;left:-10%;width:120%;height:36%;background-color:#bd796d;background-image:linear-gradient(90deg,#603b4a 2px,transparent 2px),linear-gradient(#603b4a 2px,transparent 2px);background-size:48px 34px;transform:perspective(180px) rotateX(10deg);transform-origin:bottom}
-.garland{position:absolute;z-index:4;top:39%;left:3%;width:29%;height:35px;border-top:4px dotted #ffcb61;border-radius:50%}
-.couple{position:absolute;z-index:6;bottom:16%;left:50%;transform:translateX(-50%);display:flex;align-items:flex-end;gap:0;filter:drop-shadow(0 6px 4px #4b1c2c)}
-.person{position:relative;width:64px;height:130px}
-.head{position:absolute;top:0;left:10px;width:48px;height:52px;border-radius:48% 48% 44% 44%;background:#e8ad87;border:2px solid #6d3a43}
-.hair{position:absolute;top:-5px;left:8px;width:52px;height:29px;border-radius:50% 50% 20% 20%;background:#241827;z-index:1}
-.body{position:absolute;top:49px;left:4px;width:62px;height:70px;border-radius:18px 18px 7px 7px;background:#fff0df;border:2px solid #f8c7a0}
-.skirt{position:absolute;top:68px;left:-3px;width:75px;height:59px;background:#d72d57;clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);border-bottom:3px solid #ffd56b}
-.girl .body{background:#ff9e32}.girl .skirt{background:#d92f5c;background-image:radial-gradient(#ffe49a 2px,transparent 2px);background-size:12px 12px}
-.girl .hair{height:43px;border-radius:50% 50% 35% 35%}
-.eye{position:absolute;z-index:2;top:28px;left:22px;width:4px;height:6px;border-radius:50%;background:#2c1822}
-.rabbit{position:absolute;z-index:7;bottom:13%;left:22%;font-size:54px;filter:drop-shadow(0 4px 3px #4b1c2c)}
-.diya{position:absolute;z-index:8;bottom:9%;width:34px;height:19px;border-radius:0 0 50% 50%;background:#a9432d;border:2px solid #ffbd63;cursor:pointer;filter:drop-shadow(0 0 4px #ff9c36)}
-.diya:before{content:"";position:absolute;left:12px;top:-16px;width:8px;height:17px;border-radius:50% 50% 50% 0;background:#ffdb67;box-shadow:0 0 14px 5px #ff9b32;transform:rotate(8deg)}
-.diya.off:before{display:none}
-.d1{left:8%}.d2{left:31%;bottom:6%}.d3{right:28%;bottom:7%}.d4{right:8%;bottom:11%}
-.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:16px 4px}
-button{border:1px solid #ffdc91;background:linear-gradient(135deg,#ffcf69,#ff9b45);color:#4b2030;font-weight:750;padding:12px 17px;border-radius:999px;font-size:14px;box-shadow:0 5px 14px #0004;cursor:pointer}
-button.secondary{background:#3c2456;color:#ffe8bb;border-color:#b68bd0}
-.note{text-align:center;color:#f5dcb9;font-size:13px;padding:0 10px 20px}
-.message{display:none;margin:8px auto 24px;max-width:500px;text-align:center;padding:18px;border:1px solid #eab96c;border-radius:18px;background:#321c42;color:#ffe8b5}
-.message.show{display:block;animation:pop .4s ease}
-@keyframes pop{from{transform:scale(.8);opacity:0}to{transform:scale(1);opacity:1}}
-.spark{position:absolute;z-index:10;pointer-events:none;font-size:22px;animation:burst 1.2s ease-out forwards}
-@keyframes burst{0%{transform:translate(0,0) scale(.3);opacity:1}100%{transform:translate(var(--x),var(--y)) scale(1.5);opacity:0}}
-footer{text-align:center;color:#c8a7c9;font-size:12px;padding:10px 10px 25px}
-@media(max-width:520px){.scene{min-height:460px;height:62vh}.building{height:43%}.middle{height:48%}.couple{bottom:16%;left:52%;transform:translateX(-50%) scale(.83)}.rabbit{left:17%;font-size:46px}.sign{font-size:8px}}
+:root{--gold:#ffd77b;--pink:#ff8fc5;--ink:#120d2a}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#100b27;color:#fff;font-family:system-ui,-apple-system,Segoe UI,sans-serif;touch-action:none}
+#scene{position:fixed;inset:0}
+canvas{display:block}
+.vignette{position:fixed;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(10,7,30,.52),transparent 28%,transparent 70%,rgba(10,7,30,.48))}
+header{position:fixed;top:0;left:0;right:0;padding:calc(env(safe-area-inset-top) + 14px) 16px 8px;display:flex;justify-content:space-between;align-items:flex-start;pointer-events:none}
+.brand{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#f9dca5;font-weight:800;text-shadow:0 2px 12px #000}
+h1{font-family:Georgia,serif;font-weight:500;font-size:clamp(23px,6vw,38px);line-height:1.02;margin:6px 0 0;text-shadow:0 3px 18px #08051a}
+.pill{pointer-events:auto;border:1px solid #ffffff38;background:#180f36b8;backdrop-filter:blur(14px);color:#fff;border-radius:99px;padding:9px 12px;font-size:12px}
+#hint{position:fixed;top:115px;left:50%;transform:translateX(-50%);padding:8px 13px;border-radius:30px;background:#170e33b8;border:1px solid #ffffff24;color:#fce6bb;font-size:11px;white-space:nowrap;backdrop-filter:blur(12px);pointer-events:none;transition:opacity .5s}
+.bottom{position:fixed;left:0;right:0;bottom:0;padding:10px 12px calc(env(safe-area-inset-bottom) + 12px);display:flex;flex-direction:column;gap:9px}
+.toolbar{display:flex;gap:7px;justify-content:center;flex-wrap:wrap}
+.tool{border:1px solid #ffffff2b;background:#1a1237d9;color:#fff;border-radius:15px;padding:10px 12px;font-size:12px;font-weight:650;backdrop-filter:blur(14px);box-shadow:0 6px 20px #0003}
+.tool.active{background:linear-gradient(135deg,#ffbd69,#ed7cae);color:#26132d;border-color:#ffe3aa}
+.tool:active{transform:scale(.96)}
+.subbar{display:flex;align-items:center;justify-content:space-between;gap:10px}
+#status{font-size:11px;color:#f6dcae;text-shadow:0 2px 8px #000;max-width:65%}
+#walkpad{display:none;gap:5px;align-items:center}
+#walkpad button{width:39px;height:39px;border-radius:50%;border:1px solid #ffffff45;background:#1a1237d9;color:#fff;font-size:17px}
+#walkpad.show{display:flex}
+#message{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:#09051ac9;backdrop-filter:blur(8px);padding:25px;z-index:5}
+#message.show{display:flex}
+.letter{max-width:420px;width:100%;text-align:center;padding:30px 24px;border:1px solid #f6d49b66;border-radius:25px;background:linear-gradient(150deg,#33204f,#17102f);box-shadow:0 20px 80px #0008}
+.letter .spark{font-size:35px}
+.letter h2{font:500 30px Georgia,serif;color:#ffe0a0;margin:12px 0}
+.letter p{color:#f6e8df;line-height:1.7;font-size:14px}
+.letter button{margin-top:12px}
+#photoInput{display:none}
+#crosshair{position:fixed;left:50%;top:50%;width:8px;height:8px;border:1px solid #fff8;border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;opacity:0}
+@media(min-width:700px){.bottom{max-width:760px;left:50%;transform:translateX(-50%);width:100%}header{padding-left:28px;padding-right:28px}}
 </style>
+<script type="importmap">
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}
+</script>
 </head>
 <body>
-<header><h1>✨ Diwali Ki Raat ✨</h1><p class="sub">A little world full of lights, love and happiness 🪔</p></header>
-<main class="scene-wrap">
- <section class="scene" id="scene" aria-label="Interactive Diwali street">
-  <div class="moon"></div><div class="string"></div>
-  <span class="star" style="top:12%;left:12%">✦</span><span class="star" style="top:23%;left:76%">✧</span><span class="star" style="top:8%;left:49%">✦</span><span class="star" style="top:31%;left:28%">✧</span>
-  <div class="lantern" style="left:16%"></div><div class="lantern" style="left:48%;top:17%"></div><div class="lantern" style="left:82%;top:14%"></div>
-  <div class="building left"><i class="win"></i><i class="win"></i><i class="door"></i></div>
-  <div class="building middle"><i class="win"></i><i class="win"></i><i class="door"></i></div>
-  <div class="building right"><i class="win"></i><i class="win"></i><i class="door"></i></div>
-  <div class="temple"></div><div class="sign">Mithai Ghar</div><div class="garland"></div>
-  <div class="floor"></div>
-  <div class="rabbit" aria-label="Bunny">🐰</div>
-  <div class="couple"><div class="person boy"><div class="hair"></div><div class="head"><i class="eye"></i></div><div class="body"></div></div><div class="person girl"><div class="hair"></div><div class="head"><i class="eye"></i></div><div class="body"></div><div class="skirt"></div></div></div>
-  <button class="diya d1" aria-label="Light diya"></button><button class="diya d2" aria-label="Light diya"></button><button class="diya d3" aria-label="Light diya"></button><button class="diya d4" aria-label="Light diya"></button>
- </section>
- <div class="actions">
-  <button id="lightAll">🪔 Light all diyas</button>
-  <button id="sparkles" class="secondary">✨ Phuljhadi magic</button>
-  <button id="surprise" class="secondary">💌 Open surprise</button>
+<div id="scene"></div><div class="vignette"></div>
+<header><div><div class="brand">A tiny world of light</div><h1>Happy Diwali ✨</h1></div><button class="pill" id="sound">♫ Sound off</button></header>
+<div id="hint">Tap the street to explore · Choose a tool below</div><div id="crosshair"></div>
+<div class="bottom">
+ <div class="toolbar">
+  <button class="tool active" data-mode="explore">🚶 Explore</button>
+  <button class="tool" data-mode="diya">🪔 Place diya</button>
+  <button class="tool" data-mode="rangoli">🌸 Rangoli</button>
+  <button class="tool" id="fireworks">🎆 Fireworks</button>
+  <button class="tool" id="lights">🏠 House lights</button>
+  <button class="tool" id="photos">📷 Photo corner</button>
+  <button class="tool" id="wish">💌 A little wish</button>
  </div>
- <p class="note">Tap each diya to light it. Tap the buttons to make your Diwali night sparkle!</p>
- <div class="message" id="message"><h2>🌟 Happy Diwali! 🌟</h2><p>May your life glow with happiness, peace and countless beautiful moments. 🪔💛</p></div>
-</main>
-<footer>Made with ✨ for a special Diwali night</footer>
-<script>
-const diyas=[...document.querySelectorAll('.diya')];
-diyas.forEach(d=>d.addEventListener('click',()=>d.classList.toggle('off')));
-document.getElementById('lightAll').addEventListener('click',()=>diyas.forEach(d=>d.classList.remove('off')));
-const scene=document.getElementById('scene');
-document.getElementById('sparkles').addEventListener('click',()=>{
- for(let n=0;n<34;n++){const s=document.createElement('span');s.className='spark';s.textContent=['✨','🌟','💫','✦'][n%4];s.style.left=(12+Math.random()*76)+'%';s.style.top=(22+Math.random()*53)+'%';s.style.setProperty('--x',(Math.random()*150-75)+'px');s.style.setProperty('--y',(Math.random()*-150-20)+'px');scene.appendChild(s);setTimeout(()=>s.remove(),1300)}
+ <div class="subbar"><div id="status">Explore the glowing little street.</div><div id="walkpad"><button data-dir="left">←</button><button data-dir="up">↑</button><button data-dir="down">↓</button><button data-dir="right">→</button></div></div>
+</div>
+<input id="photoInput" type="file" accept="image/*" multiple>
+<div id="message"><div class="letter"><div class="spark">🪔 ✨ 🌸</div><h2>A little wish for you</h2><p>May your days be as bright as these little lights, your heart as peaceful as a quiet Diwali night, and your world always full of reasons to smile.</p><p>Made with care, just for you.</p><button class="tool active" id="closeWish">Back to the lights</button></div></div>
+<script type="module">
+import * as THREE from 'three';
+const root=document.querySelector('#scene');
+const scene=new THREE.Scene(); scene.background=new THREE.Color(0x100b27); scene.fog=new THREE.Fog(0x100b27,22,62);
+const camera=new THREE.PerspectiveCamera(48,innerWidth/innerHeight,.1,120);
+camera.position.set(0,8,17); camera.lookAt(0,1,0);
+const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false});
+renderer.setPixelRatio(Math.min(devicePixelRatio,1.8)); renderer.setSize(innerWidth,innerHeight);
+renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+renderer.outputColorSpace=THREE.SRGBColorSpace; renderer.toneMapping=THREE.ACESFilmicToneMapping; renderer.toneMappingExposure=1.25;
+root.appendChild(renderer.domElement);
+scene.add(new THREE.HemisphereLight(0xb8a9ff,0x34203e,2));
+const moon=new THREE.DirectionalLight(0xffdfb0,2.1); moon.position.set(-8,15,8); moon.castShadow=true; scene.add(moon);
+const mat=(c,r=.8,m=0)=>new THREE.MeshStandardMaterial({color:c,roughness:r,metalness:m});
+const ground= new THREE.Mesh(new THREE.PlaneGeometry(100,100),mat(0x211a3a)); ground.rotation.x=-Math.PI/2; ground.position.y=-.12; ground.receiveShadow=true;scene.add(ground);
+const road=new THREE.Mesh(new THREE.PlaneGeometry(8,65),mat(0x35304b));road.rotation.x=-Math.PI/2;road.position.set(0,-.1,-12);road.receiveShadow=true;scene.add(road);
+const curbmat=mat(0x8d6b91),lineMat=mat(0xf5c985);
+for(const x of [-4.15,4.15]){let c=new THREE.Mesh(new THREE.BoxGeometry(.18,.18,65),curbmat);c.position.set(x,0,-12);c.castShadow=true;scene.add(c)}
+for(let z=16;z>-44;z-=4){let l=new THREE.Mesh(new THREE.BoxGeometry(.09,.015,1.3),lineMat);l.position.set(0,-.085,z);scene.add(l)}
+// distant stars
+const starGeo=new THREE.BufferGeometry(),starPos=[];
+for(let i=0;i<280;i++)starPos.push((Math.random()-.5)*65,Math.random()*22+3,-Math.random()*65-4);
+starGeo.setAttribute('position',new THREE.Float32BufferAttribute(starPos,3));
+const stars=new THREE.Points(starGeo,new THREE.PointsMaterial({color:0xffe5b4,size:.09,transparent:true,opacity:.85}));scene.add(stars);
+function box(parent,w,h,d,material,x,y,z){let o=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),material);o.position.set(x,y,z);o.castShadow=true;o.receiveShadow=true;parent.add(o);return o}
+function sphere(parent,r,material,x,y,z,sx=1,sy=1,sz=1){let o=new THREE.Mesh(new THREE.SphereGeometry(r,18,14),material);o.position.set(x,y,z);o.scale.set(sx,sy,sz);o.castShadow=true;parent.add(o);return o}
+function makeHouse(x,z,color,seed){
+ const g=new THREE.Group();g.position.set(x,0,z);scene.add(g);
+ box(g,4.4,3.1,3.2,mat(color),0,1.5,0);
+ const roof=new THREE.Mesh(new THREE.ConeGeometry(3.2,1.5,4),mat(0x563653));roof.rotation.y=Math.PI/4;roof.position.set(0,3.8,0);roof.scale.set(1,.8,.8);roof.castShadow=true;g.add(roof);
+ box(g,.95,1.75,.12,mat(0x593b4d),0,.88,1.67);
+ for(let wx of [-1.35,1.35]){box(g,.78,.82,.12,mat(0x4b385d),wx,1.95,1.67);box(g,.58,.62,.08,mat(0xffc878,.3),wx,1.95,1.75)}
+ const glow=new THREE.PointLight(0xffa95c,2.2,9);glow.position.set(0,2,2.1);g.add(glow);
+ const bulbs=[];
+ for(let i=0;i<9;i++){let a=sphere(g,.09,mat(0xffd47c,.3),-1.8+i*.45,3.1,1.7);bulbs.push(a)}
+ const garland=new THREE.Mesh(new THREE.TorusGeometry(.9,.045,6,32,Math.PI),mat(0xf2b35e));garland.position.set(0,2.7,1.76);garland.rotation.z=Math.PI;g.add(garland);
+ return {group:g,glow,bulbs};
+}
+const houses=[];
+houses.push(makeHouse(-7,-1,0x8e4e69,1),makeHouse(7,-5,0x526a91,2),makeHouse(-7,-13,0x8a6948,3),makeHouse(7,-18,0x65548e,4),makeHouse(-7,-27,0x477b75,5),makeHouse(7,-32,0x9a5d72,6));
+function makeDiya(x,z){
+ const g=new THREE.Group();g.position.set(x,.02,z);scene.add(g);
+ const bowl=new THREE.Mesh(new THREE.SphereGeometry(.34,20,12,0,Math.PI*2,0,Math.PI/2),mat(0xc66b36,.35,.35));bowl.scale.y=.45;g.add(bowl);
+ const oil=new THREE.Mesh(new THREE.CircleGeometry(.23,20),mat(0xffc35e,.2));oil.rotation.x=-Math.PI/2;oil.position.y=.09;g.add(oil);
+ const flame=new THREE.Mesh(new THREE.ConeGeometry(.13,.42,12),new THREE.MeshBasicMaterial({color:0xffb43d}));flame.position.y=.34;flame.scale.set(.7,1.2,.7);g.add(flame);
+ const light=new THREE.PointLight(0xff9b37,1.5,4);light.position.y=.45;g.add(light);
+ g.userData.flame=flame;g.userData.light=light;return g;
+}
+const diyas=[];
+for(let z=13;z>-40;z-=3.2){diyas.push(makeDiya(-4.65,z),makeDiya(4.65,z))}
+function makeRangoli(x,z){
+ const group=new THREE.Group();group.position.set(x,.015,z);scene.add(group);
+ const colors=[0xff8db6,0xffd36b,0x9dd9e5,0xc7a2ff,0xffffff];
+ for(let ring=0;ring<3;ring++){
+  const radius=.25+ring*.23;
+  const tor=new THREE.Mesh(new THREE.TorusGeometry(radius,.035,6,48),mat(colors[ring],.55));tor.rotation.x=-Math.PI/2;group.add(tor);
+ }
+ for(let i=0;i<8;i++){let a=i*Math.PI/4;let p=sphere(group,.11,mat(colors[i%5]),Math.cos(a)*.48,.025,Math.sin(a)*.48,.7,1,.7)}
+ sphere(group,.12,mat(0xffe4a0),0,.04,0);
+}
+const initialRangoli=[[-2,5],[2,-8],[-2,-22],[2,-36]];initialRangoli.forEach(p=>makeRangoli(...p));
+// cute stylized cartoon people
+function makePerson(x,z,shirt,hair,skirt=false){
+ const g=new THREE.Group();g.position.set(x,0,z);scene.add(g);
+ const skin=mat(0xf0b98e),clothes=mat(shirt),hairmat=mat(hair),shoe=mat(0x30243b);
+ // body and head
+ const body=sphere(g,.34,clothes,0,.92,0,.82,1.25,.62);
+ sphere(g,.29,skin,0,1.68,0,1,1.08,.95);
+ // hair cap and side locks
+ sphere(g,.3,hairmat,0,1.84,-.035,1.02,.62,1.02);
+ sphere(g,.12,hairmat,-.24,1.65,.11,1,1.5,.8);sphere(g,.12,hairmat,.24,1.65,.11,1,1.5,.8);
+ // eyes
+ for(let ex of [-.105,.105]){sphere(g,.035,mat(0x30243b),ex,1.7,.26,.8,1, .55);sphere(g,.012,mat(0xffffff),ex-.01,1.715,.28)}
+ // smile curve
+ const smile=new THREE.Mesh(new THREE.TorusGeometry(.07,.012,5,16,Math.PI),mat(0x9c4f58));smile.position.set(0,1.57,.27);smile.rotation.z=Math.PI;g.add(smile);
+ // arms
+ for(let side of [-1,1]){let arm=sphere(g,.11,skin,side*.36,1.05,0,.75,1.9,.8);arm.rotation.z=side*.25}
+ // legs
+ for(let side of [-1,1]){box(g,.17,.53,.18,skin,side*.13,.3,0);box(g,.24,.12,.34,shoe,side*.13,.07,.08)}
+ // hair bow for girl
+ if(skirt){sphere(g,.12,mat(0xff91bf),.28,2.02,0,1,.6,.6);box(g,.48,.15,.42,mat(0xff85b8),0,.62,0)}
+ return g;
+}
+const boy=makePerson(-.65,7,0x4b9ac1,0x30243b,false);
+const girl=makePerson(.65,7,0xe58ab2,0x30243b,true);
+boy.rotation.y=Math.PI;girl.rotation.y=Math.PI;
+const ambientLanterns=[];
+for(let x of [-10,10])for(let z of [-3,-17,-30]){let pole=box(scene,.12,4,.12,mat(0x75506c),x,2,z);let lamp=sphere(scene,.28,mat(0xffd17d,.25),x,4.15,z);let pl=new THREE.PointLight(0xffb85b,2,9);pl.position.set(x,4.2,z);scene.add(pl);ambientLanterns.push(pl)}
+// photo wall on right side
+const wall=new THREE.Group();wall.position.set(9,2,-12);wall.rotation.y=-Math.PI/2;scene.add(wall);
+box(wall,4,3,.25,mat(0x563c5b),0,0,0);
+for(let i=0;i<3;i++)for(let j=0;j<2;j++){let frame=box(wall,.9,.85,.12,mat(0xe8b977),-1.25+i*1.25,.65-j*1.3,.2);box(wall,.76,.7,.04,mat([0x9b7eb4,0x628b9a,0xc47b91][(i+j)%3]),-1.25+i*1.25,.65-j*1.3,.29)}
+// interaction state
+let mode='explore',lightsOn=true,walk={x:0,z:0},target={x:0,z:0},drag=false,lastPt=null;
+const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
+function setStatus(t){document.querySelector('#status').textContent=t}
+function setMode(m){mode=m;document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('active',b.dataset.mode===m));document.querySelector('#walkpad').classList.toggle('show',m==='explore');
+ setStatus(m==='diya'?'Tap an open spot to place a glowing diya.':m==='rangoli'?'Press and drag on the ground to draw a rangoli.':'Use the arrows or tap the street to explore.')}
+document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>setMode(b.dataset.mode));
+document.querySelectorAll('#walkpad button').forEach(b=>{
+ const dir=b.dataset.dir;
+ const move=()=>{if(dir==='left')target.x=Math.max(-2.8,target.x-.8);if(dir==='right')target.x=Math.min(2.8,target.x+.8);if(dir==='up')target.z-=1;if(dir==='down')target.z+=1};
+ b.addEventListener('pointerdown',e=>{e.preventDefault();move()});
 });
-document.getElementById('surprise').addEventListener('click',()=>document.getElementById('message').classList.toggle('show'));
+function groundPoint(e){const r=renderer.domElement.getBoundingClientRect();pointer.x=(e.clientX-r.left)/r.width*2-1;pointer.y=-((e.clientY-r.top)/r.height)*2+1;raycaster.setFromCamera(pointer,camera);const hit=raycaster.intersectObject(ground);return hit[0]?.point}
+renderer.domElement.addEventListener('pointerdown',e=>{drag=true;lastPt=groundPoint(e);if(mode==='rangoli'&&lastPt){makeRangoli(lastPt.x,lastPt.z);setStatus('Your rangoli is glowing! Keep drawing.')}});
+renderer.domElement.addEventListener('pointermove',e=>{if(!drag||mode!=='rangoli')return;let p=groundPoint(e);if(p&&(!lastPt||p.distanceTo(lastPt)>.85)){makeRangoli(p.x,p.z);lastPt=p}});
+renderer.domElement.addEventListener('pointerup',e=>{
+ if(!drag)return;drag=false;let p=groundPoint(e);
+ if(mode==='diya'&&p){diyas.push(makeDiya(p.x,p.z));setStatus('A new little light for the street 🪔')}
+ else if(mode==='explore'&&p){target.x=THREE.MathUtils.clamp(p.x*.45,-2.8,2.8);target.z=THREE.MathUtils.clamp(p.z+2,-35,12);setStatus('Taking a little walk through the lights…')}
+});
+document.querySelector('#fireworks').onclick=()=>{for(let i=0;i<4;i++)burst((Math.random()-.5)*15,7+Math.random()*6,-Math.random()*25-5);setStatus('Look up! A little sky full of sparkle 🎆')};
+let particles=[];
+function burst(x,y,z){let color=[0xffc56b,0xff80b5,0x9de5ff,0xc6a3ff][Math.floor(Math.random()*4)];for(let i=0;i<42;i++){let m=new THREE.Mesh(new THREE.SphereGeometry(.055,6,5),new THREE.MeshBasicMaterial({color,transparent:true}));m.position.set(x,y,z);scene.add(m);let v=new THREE.Vector3((Math.random()-.5)*.22,Math.random()*.23,(Math.random()-.5)*.22);particles.push({m,v,life:1.5})}}
+document.querySelector('#lights').onclick=()=>{lightsOn=!lightsOn;houses.forEach(h=>{h.glow.intensity=lightsOn?2.2:.12;h.bulbs.forEach(b=>b.material=mat(lightsOn?0xffd47c:0x66556c))});setStatus(lightsOn?'All the little homes are glowing.':'The house lights are dimmed.')};
+document.querySelector('#photos').onclick=()=>document.querySelector('#photoInput').click();
+document.querySelector('#photoInput').onchange=e=>{let files=[...e.target.files].slice(0,6);if(!files.length)return;let urls=files.map(f=>URL.createObjectURL(f));urls.forEach((url,i)=>{let loader=new THREE.TextureLoader();loader.load(url,tex=>{tex.colorSpace=THREE.SRGBColorSpace;let m=new THREE.Mesh(new THREE.PlaneGeometry(.75,.68),new THREE.MeshBasicMaterial({map:tex}));m.position.set(-1.25+(i%3)*1.25,.65-Math.floor(i/3)*1.3,.36);wall.add(m)})});setStatus('Your selected photos are displayed in the photo corner on this device.');};
+document.querySelector('#wish').onclick=()=>document.querySelector('#message').classList.add('show');
+document.querySelector('#closeWish').onclick=()=>document.querySelector('#message').classList.remove('show');
+let audio=null,soundOn=false;
+document.querySelector('#sound').onclick=()=>{soundOn=!soundOn;document.querySelector('#sound').textContent=soundOn?'♫ Sound on':'♫ Sound off';if(soundOn){try{audio=new (window.AudioContext||window.webkitAudioContext)();}catch(e){}}else if(audio){audio.close();audio=null}};
+function animate(t){requestAnimationFrame(animate);const time=t*.001;
+ diyas.forEach(d=>{let f=d.userData.flame;f.scale.y=1.1+Math.sin(time*7+d.position.z)*.16;d.userData.light.intensity=1.2+Math.sin(time*9+d.position.x)*.25});
+ boy.position.x+=(target.x-.65-walk.x)*.025;girl.position.x+=(target.x+.65-walk.x)*.025;
+ boy.position.z+=(target.z+7-walk.z)*.025;girl.position.z+=(target.z+7-walk.z)*.025;
+ walk.x+=(target.x-walk.x)*.08;walk.z+=(target.z-walk.z)*.08;
+ const moving=Math.abs(target.x-walk.x)+Math.abs(target.z-walk.z)>.05;
+ boy.position.y=moving?Math.abs(Math.sin(time*9))*.09:0;girl.position.y=moving?Math.abs(Math.sin(time*9+1))*.09:0;
+ camera.position.x+=(walk.x*.34-camera.position.x)*.025;camera.position.z+=(17+walk.z*.25-camera.position.z)*.025;camera.lookAt(walk.x*.25,1,walk.z-2);
+ particles=particles.filter(p=>{p.m.position.add(p.v);p.v.y-=.004;p.life-=.018;p.m.material.opacity=Math.max(0,p.life);if(p.life<=0){scene.remove(p.m);p.m.geometry.dispose();p.m.material.dispose();return false}return true});
+ renderer.render(scene,camera)}
+animate(0);
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
+setTimeout(()=>{document.querySelector('#hint').style.opacity=0},6500);
 </script>
-</body></html>
+</body>
+</html>
