@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#180c2d">
+<title>Diwali Night ✨</title>
+<style>
+*{box-sizing:border-box} 
+:root{--gold:#ffd66b;--night:#170c2a}
+body{margin:0;background:radial-gradient(ellipse at 50% 25%,#42205d 0,#170c2a 65%,#090713 100%);color:#fff;font-family:system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh;overflow-x:hidden}
+header{text-align:center;padding:22px 14px 10px;position:relative;z-index:2}
+h1{font-family:Georgia,serif;color:#ffe7a0;font-size:clamp(28px,7vw,46px);margin:4px 0;text-shadow:0 0 18px #ffae42}
+.sub{color:#f8dcb7;font-size:14px;margin:0}
+.scene-wrap{max-width:950px;margin:0 auto;padding:8px 12px 0}
+.scene{height:min(67vh,610px);min-height:430px;position:relative;overflow:hidden;border:2px solid #d99b55;border-radius:22px;background:linear-gradient(#25113e 0 37%,#71335c 37% 54%,#b85c4e 54% 100%);box-shadow:0 18px 50px #0009;isolation:isolate}
+.moon{position:absolute;top:7%;right:12%;width:62px;height:62px;border-radius:50%;background:#fff0b4;box-shadow:0 0 35px #ffdf8d}
+.star{position:absolute;color:#ffe7a0;text-shadow:0 0 10px #ffdf8d;animation:twinkle 2s infinite alternate}
+@keyframes twinkle{to{opacity:.35;transform:scale(.75)}}
+.string{position:absolute;top:12%;left:-5%;width:110%;height:90px;border-top:2px solid #ffd58b;border-radius:50%;transform:rotate(5deg)}
+.lantern{position:absolute;top:13%;width:24px;height:35px;background:linear-gradient(90deg,#ff9c32,#ffe18b,#f26a29);clip-path:polygon(50% 0,100% 28%,85% 100%,15% 100%,0 28%);filter:drop-shadow(0 0 12px #ffb342);animation:sway 3s ease-in-out infinite alternate}
+@keyframes sway{to{transform:rotate(8deg)}}
+.building{position:absolute;bottom:29%;width:31%;height:46%;border:4px solid #e7a66c;box-shadow:inset 0 0 0 5px #ffffff20,0 8px 15px #30112b;z-index:1}
+.building:before{content:"";position:absolute;left:-5px;right:-5px;top:-17px;height:17px;background:#ffd08b;border:3px solid #a64b4b}
+.left{left:-2%;background:linear-gradient(90deg,#e85c91,#b83c82)}.middle{left:34%;width:31%;height:52%;background:linear-gradient(90deg,#8b55cb,#6d3caa)}.right{right:-2%;background:linear-gradient(90deg,#ec8a4f,#c85c43)}
+.win{position:absolute;width:24%;height:23%;background:#ffe59b;border:5px solid #7b3c50;box-shadow:0 0 15px #ffe27a,inset 0 0 12px #fff;top:20%}
+.win:nth-child(1){left:13%}.win:nth-child(2){right:13%;top:52%}
+.door{position:absolute;bottom:0;left:35%;width:30%;height:37%;border:5px solid #71364c;border-radius:45% 45% 0 0;background:repeating-linear-gradient(90deg,#54253b 0 8px,#74354a 8px 12px)}
+.sign{position:absolute;bottom:34%;left:39%;font-size:10px;background:#542c2b;color:#ffe6a3;padding:3px 8px;border:1px solid #ffdb87;z-index:2}
+.temple{position:absolute;left:42%;bottom:29%;width:16%;height:40%;background:#f5d6c0;border:4px solid #d98c65;z-index:2}
+.temple:before{content:"";position:absolute;left:5%;right:5%;top:-42%;height:45%;background:#f47c38;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.temple:after{content:"";position:absolute;left:35%;bottom:0;width:30%;height:48%;background:#8a3944;border-radius:50% 50% 0 0}
+.floor{position:absolute;z-index:3;bottom:0;left:-10%;width:120%;height:36%;background-color:#bd796d;background-image:linear-gradient(90deg,#603b4a 2px,transparent 2px),linear-gradient(#603b4a 2px,transparent 2px);background-size:48px 34px;transform:perspective(180px) rotateX(10deg);transform-origin:bottom}
+.garland{position:absolute;z-index:4;top:39%;left:3%;width:29%;height:35px;border-top:4px dotted #ffcb61;border-radius:50%}
+.couple{position:absolute;z-index:6;bottom:16%;left:50%;transform:translateX(-50%);display:flex;align-items:flex-end;gap:0;filter:drop-shadow(0 6px 4px #4b1c2c)}
+.person{position:relative;width:64px;height:130px}
+.head{position:absolute;top:0;left:10px;width:48px;height:52px;border-radius:48% 48% 44% 44%;background:#e8ad87;border:2px solid #6d3a43}
+.hair{position:absolute;top:-5px;left:8px;width:52px;height:29px;border-radius:50% 50% 20% 20%;background:#241827;z-index:1}
+.body{position:absolute;top:49px;left:4px;width:62px;height:70px;border-radius:18px 18px 7px 7px;background:#fff0df;border:2px solid #f8c7a0}
+.skirt{position:absolute;top:68px;left:-3px;width:75px;height:59px;background:#d72d57;clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);border-bottom:3px solid #ffd56b}
+.girl .body{background:#ff9e32}.girl .skirt{background:#d92f5c;background-image:radial-gradient(#ffe49a 2px,transparent 2px);background-size:12px 12px}
+.girl .hair{height:43px;border-radius:50% 50% 35% 35%}
+.eye{position:absolute;z-index:2;top:28px;left:22px;width:4px;height:6px;border-radius:50%;background:#2c1822}
+.rabbit{position:absolute;z-index:7;bottom:13%;left:22%;font-size:54px;filter:drop-shadow(0 4px 3px #4b1c2c)}
+.diya{position:absolute;z-index:8;bottom:9%;width:34px;height:19px;border-radius:0 0 50% 50%;background:#a9432d;border:2px solid #ffbd63;cursor:pointer;filter:drop-shadow(0 0 4px #ff9c36)}
+.diya:before{content:"";position:absolute;left:12px;top:-16px;width:8px;height:17px;border-radius:50% 50% 50% 0;background:#ffdb67;box-shadow:0 0 14px 5px #ff9b32;transform:rotate(8deg)}
+.diya.off:before{display:none}
+.d1{left:8%}.d2{left:31%;bottom:6%}.d3{right:28%;bottom:7%}.d4{right:8%;bottom:11%}
+.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:16px 4px}
+button{border:1px solid #ffdc91;background:linear-gradient(135deg,#ffcf69,#ff9b45);color:#4b2030;font-weight:750;padding:12px 17px;border-radius:999px;font-size:14px;box-shadow:0 5px 14px #0004;cursor:pointer}
+button.secondary{background:#3c2456;color:#ffe8bb;border-color:#b68bd0}
+.note{text-align:center;color:#f5dcb9;font-size:13px;padding:0 10px 20px}
+.message{display:none;margin:8px auto 24px;max-width:500px;text-align:center;padding:18px;border:1px solid #eab96c;border-radius:18px;background:#321c42;color:#ffe8b5}
+.message.show{display:block;animation:pop .4s ease}
+@keyframes pop{from{transform:scale(.8);opacity:0}to{transform:scale(1);opacity:1}}
+.spark{position:absolute;z-index:10;pointer-events:none;font-size:22px;animation:burst 1.2s ease-out forwards}
+@keyframes burst{0%{transform:translate(0,0) scale(.3);opacity:1}100%{transform:translate(var(--x),var(--y)) scale(1.5);opacity:0}}
+footer{text-align:center;color:#c8a7c9;font-size:12px;padding:10px 10px 25px}
+@media(max-width:520px){.scene{min-height:460px;height:62vh}.building{height:43%}.middle{height:48%}.couple{bottom:16%;left:52%;transform:translateX(-50%) scale(.83)}.rabbit{left:17%;font-size:46px}.sign{font-size:8px}}
+</style>
+</head>
+<body>
+<header><h1>✨ Diwali Ki Raat ✨</h1><p class="sub">A little world full of lights, love and happiness 🪔</p></header>
+<main class="scene-wrap">
+ <section class="scene" id="scene" aria-label="Interactive Diwali street">
+  <div class="moon"></div><div class="string"></div>
+  <span class="star" style="top:12%;left:12%">✦</span><span class="star" style="top:23%;left:76%">✧</span><span class="star" style="top:8%;left:49%">✦</span><span class="star" style="top:31%;left:28%">✧</span>
+  <div class="lantern" style="left:16%"></div><div class="lantern" style="left:48%;top:17%"></div><div class="lantern" style="left:82%;top:14%"></div>
+  <div class="building left"><i class="win"></i><i class="win"></i><i class="door"></i></div>
+  <div class="building middle"><i class="win"></i><i class="win"></i><i class="door"></i></div>
+  <div class="building right"><i class="win"></i><i class="win"></i><i class="door"></i></div>
+  <div class="temple"></div><div class="sign">Mithai Ghar</div><div class="garland"></div>
+  <div class="floor"></div>
+  <div class="rabbit" aria-label="Bunny">🐰</div>
+  <div class="couple"><div class="person boy"><div class="hair"></div><div class="head"><i class="eye"></i></div><div class="body"></div></div><div class="person girl"><div class="hair"></div><div class="head"><i class="eye"></i></div><div class="body"></div><div class="skirt"></div></div></div>
+  <button class="diya d1" aria-label="Light diya"></button><button class="diya d2" aria-label="Light diya"></button><button class="diya d3" aria-label="Light diya"></button><button class="diya d4" aria-label="Light diya"></button>
+ </section>
+ <div class="actions">
+  <button id="lightAll">🪔 Light all diyas</button>
+  <button id="sparkles" class="secondary">✨ Phuljhadi magic</button>
+  <button id="surprise" class="secondary">💌 Open surprise</button>
+ </div>
+ <p class="note">Tap each diya to light it. Tap the buttons to make your Diwali night sparkle!</p>
+ <div class="message" id="message"><h2>🌟 Happy Diwali! 🌟</h2><p>May your life glow with happiness, peace and countless beautiful moments. 🪔💛</p></div>
+</main>
+<footer>Made with ✨ for a special Diwali night</footer>
+<script>
+const diyas=[...document.querySelectorAll('.diya')];
+diyas.forEach(d=>d.addEventListener('click',()=>d.classList.toggle('off')));
+document.getElementById('lightAll').addEventListener('click',()=>diyas.forEach(d=>d.classList.remove('off')));
+const scene=document.getElementById('scene');
+document.getElementById('sparkles').addEventListener('click',()=>{
+ for(let n=0;n<34;n++){const s=document.createElement('span');s.className='spark';s.textContent=['✨','🌟','💫','✦'][n%4];s.style.left=(12+Math.random()*76)+'%';s.style.top=(22+Math.random()*53)+'%';s.style.setProperty('--x',(Math.random()*150-75)+'px');s.style.setProperty('--y',(Math.random()*-150-20)+'px');scene.appendChild(s);setTimeout(()=>s.remove(),1300)}
+});
+document.getElementById('surprise').addEventListener('click',()=>document.getElementById('message').classList.toggle('show'));
+</script>
+</body></html>
